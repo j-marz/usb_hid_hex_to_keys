@@ -1,0 +1,7 @@
+# Hex values from wireshark
+
+Filter pcap on interrupts only
+Add "Leftover Capture Data" column
+Export to CSV
+Extract Leftover Capture Data values from CSV
+	tail -n +2 export.csv | awk -F "," '{print $7}' | tr -d '"'
